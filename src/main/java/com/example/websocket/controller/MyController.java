@@ -20,10 +20,10 @@ import java.security.Principal;
 @RestController
 public class MyController {
     private Logger logger = LoggerFactory.getLogger(getClass());
-    //注册过的用户信息
+    //所有在线的用户
     @Autowired
     private SimpUserRegistry userRegistry;
-    //负责发送消息的工具类
+    //发送消息的工具类 (可以主动回复客户端)
     @Autowired
     private SimpMessagingTemplate messagingTemplate;
 
